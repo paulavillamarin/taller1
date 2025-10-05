@@ -13,12 +13,15 @@ int main()
     double ganancia_total=0;
     double ganancia_actual=0;
 
-    do{    
     printf("Ingrese nombre del producto:\n");
     scanf("%s", Nombre_producto);
 
     printf("Ingrese el ID del producto:\n");
     scanf("%d", &ProductoID);
+
+    printf("Ingrese la cantidad en stock:\n");
+    scanf("%d", &Cantidad_stock);
+    do{    
 
     printf("Ingrese la cantidad en stock:\n");
     scanf("%d", &Cantidad_stock);

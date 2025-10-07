@@ -6,10 +6,13 @@ int main()
     int Cantidad_stock= 0;
     int Unidades_vender;
     int Unidades_restablecer= 0 ;
-    double Precio_unitario = 0.0;
-    double venta_actual = 0.0;
+    int porcentaje_descuento;
+    float Precio_unitario = 0.0;
+    float venta_actual = 0.0;
+    float descuento;
     char Nombre_producto [50]= "";
-    int opcion=0;
+    int opcion;
+    int opcion_desc;
     double ganancia_total=0;
     double ganancia_actual=0;
 

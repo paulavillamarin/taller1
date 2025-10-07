@@ -46,6 +46,24 @@ int main()
 
     switch(opcion) {
         case 1:
+        printf("¿Desea agregar un descuento a la compra? (INGRESE 1 SI LO DESEA O 2 SI NO LO DESEA): ");
+        scanf("%d", &opcion_desc);
+        if (opcion_desc==1){
+         printf("Ingrese la cantidad de unidades a vender: ");
+         scanf("%d", &Unidades_vender);
+         printf("Ingrese el porcentaje de descuento: ");
+         scanf("%d", &porcentaje_descuento);
+           if (Unidades_vender<= Cantidad_stock) { 
+           venta_actual=(Unidades_vender*Precio_unitario);
+           descuento= venta_actual-(venta_actual*porcentaje_descuento/100);
+           ganancia_total+=venta_actual;
+           Cantidad_stock=Cantidad_stock-Unidades_vender;
+           printf("El total de la venta es: %2f\n", descuento);
+           printf("Venta exitosa. Stock restante %d\n", Cantidad_stock);  }
+           else {
+           printf ("No hay suficiente cantidad en stock para vender\n");  }
+        }else{
+        
            printf("Ingrese la cantidad de unidades a vender: ");
            scanf("%d", &Unidades_vender);
 
@@ -53,9 +71,10 @@ int main()
            double venta_actual=Unidades_vender*Precio_unitario;
            ganancia_total+=venta_actual;
            Cantidad_stock=Cantidad_stock-Unidades_vender;
-           printf("Venta exitosa. Stock restante %d\n", Cantidad_stock);   }
+           printf("El total de la venta es: %2f\n", venta_actual);
+           printf("Venta exitosa. Stock restante %d\n", Cantidad_stock);  }
            else {
-           printf ("No hay suficiente cantidad en stock para vender\n");  }
+           printf ("No hay suficiente cantidad en stock para vender\n");  }}
            break; 
         case 2: 
            printf("Ingrese las unidades para agregar al stock:");
